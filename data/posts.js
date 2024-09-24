@@ -1,45 +1,45 @@
 const posts = [
     {
         id: 1,
-        userId: 1,
-        title: "est et quae",
+        title: "Red Sea",
+        contentId: 1,
         content:
-        "similique"
+        "About the Red Sea"
     },
     {
         id: 2,
-        userId: 1,
-        title: "est et quae",
+        contentId: 1,
+        title: "Green Grass",
         content:
-        "similique"
+        "About green grass"
     },
     {
         id: 3,
-        userId: 1,
-        title: "est et quae",
+        contentId: 1,
+        title: "Pink Meadow",
         content:
-        "similique"
+        "About the Pink Meadow"
     },
     {
         id: 4,
-        userId: 2,
-        title: "est et quae",
+        contentId: 2,
+        title: "Huge Earthquake",
         content:
-        "similique"
+        "About the Huge Earthquake"
     },
     {
         id: 5,
-        userId: 2,
-        title: "est et quae",
+        contentId: 2,
+        title: "Red Moon",
         content:
-        "similique"
+        "About the Red Moon"
     },
     {
         id: 6,
-        userId: 2,
-        title: "est et quae",
+        contentId: 2,
+        title: "Big Shuttle",
         content:
-        "similique"
+        "About the Big Shuttle"
     },
 ];
 
