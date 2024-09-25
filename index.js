@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const port = 3000;
+const CheckTime = require("../middleware/Checktime")
 
 const users = require("./data/users");
 const posts = require("./data/posts");
