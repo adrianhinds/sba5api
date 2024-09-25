@@ -42,18 +42,22 @@ app.post('/', (req,res) => {
 // patch and delete request
 app
   .route("/api/users/:id")
-  .patch((req, res) => {
+  .patch((req, res, next) => {
 
     const user = users.find((u, i) => {
       if (u.id == req.params.id) {
-        for (const key in req.body) {
-          users[i][key] = req.body[key];
+        for (const user in req.body) {
+          users[i]  = req.body;
         }
         return true;
       }
+    /*  if (user) res.json(user);
+      else next();
+    });
+    */
     });
   })
-  .delete((req, res) => {
+  .delete((req, res, next) => {
     const user = users.find((u, i) => {
       if (u.id == req.params.id) {
         users.splice(i, 1);
@@ -61,6 +65,10 @@ app
       }
     });
   });
+/*  if (user) res.json(user);
+  else next();
+});
+*/
 // error handler
 app.use((req, res) => {
     res.status(404);
