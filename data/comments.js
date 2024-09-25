@@ -1,40 +1,42 @@
-const express = require("express");
-const router = express.Router();
 
-const comments = require("../data/commets");
-
-router
-  .route("/")
-  .get((req, res) => {
-    const links = [
-      {
-        href: "comments/:id",
-        rel: ":id",
-        type: "GET",
+const comments = [
+    {
+      id: 1,
+      postId: 1,
+      userId: 1,
+      body: "Useful information on the Red Sea .",
+    },
+    {
+      id: 2,
+      postId: 2,
+      userId: 2,
+      body: "Not very useful information about the green grass.",
+    },
+    {
+      id: 3,
+      postId: 3,
+      userId: 2,
+      body: "Very helpful information on the pink meadow.",
+    },
+    {
+      id: 4,
+      postId: 4,
+      userId: 3,
+      body: "Helpful information about the huge earthquake.",
+    },
+    {
+      id: 5,
+      postId: 5,
+      userId: 1,
+      body: "Great information on the red moon."
+    
+    },
+    {
+        id: 5,
+        postId: 5,
+        userId: 1,
+        body: "Great information about the big shuttle."
+      
       },
-    ];
-
-    res.json({ comments, links });
-});
-router
-  .route("/:id")
-  .get((req, res, next) => {
-    const comment = comments.find((u) => u.id == req.params.id);
-    const links = [
-        {
-          href: `/${req.params.id}`,
-          rel: "",
-          type: "PATCH",
-        },
-        {
-          href: `/${req.params.id}`,
-          rel: "",
-          type: "DELETE",
-        },
-      ];
-  
-      if (comment) res.json({ comment, links });
-      else next();
-});
-
-module.exports = router;
+  ];
+module.exports = comments;
